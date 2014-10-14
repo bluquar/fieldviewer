@@ -113,12 +113,6 @@ def main():
     halfRadius = (maxRadius + minRadius) / 2
     for rad in arange(minRadius, maxRadius, 1./N):
         makeHeart(rad, charges, totalCharge * (rad / halfRadius) / N)
-
-    # text(text='Shae + Chris',align='center', depth=-0.3, color=color.red, height = 0.3, pos = vector(0,0.5,0))
-    #charges.append(Arc(alpha = pi/3, q=-1e-8))
-    #charges.append(Arc(alpha = pi/3, q=1e-8, radius=0.8))
-    #charges.append(Arc(alpha = pi/3, q=1e-8, radius=0.8, normal=vector(-1,0,0)))
-    #charges.append(Rod(position=vector(0,0,0.5),axis=vector(0.8,0,0),q=1e-9))
     
     arrows = VectorField(theta=arange(0,2*pi, pi/8), r=[2.1], origin = vector(0.01,0.5,0), phi=arange(0,pi, pi/15))
     arrows.setAxes(charges, N)
